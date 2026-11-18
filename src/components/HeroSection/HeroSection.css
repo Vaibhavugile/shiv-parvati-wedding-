@@ -1,0 +1,392 @@
+
+/* =========================================================
+   HERO SECTION — FIXED PORTRAIT CANVAS
+   Desktop: 600px centered
+   Mobile: full width
+========================================================= */
+
+.wedding-hero-section {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  height: 180vh;
+  height: 180svh;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+  isolation: isolate;
+}
+
+/* =========================================================
+   STICKY VIEWPORT
+========================================================= */
+
+.wedding-hero-sticky {
+  position: sticky;
+  top: 0;
+
+  z-index: 1;
+
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  /* Must be transparent so the next section can show through */
+  background: transparent;
+}
+
+/* =========================================================
+   FIXED WIDTH HERO CANVAS
+========================================================= */
+
+.wedding-hero-frame {
+  position: relative;
+
+  width: min(600px, 100%);
+  height: 100%;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  /* Do not cover the details section behind the fading image */
+  background: transparent;
+}
+
+/* =========================================================
+   ORIGINAL SHIVA KAILASH IMAGE
+========================================================= */
+
+.wedding-hero-image {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center center;
+
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+
+  will-change: transform, opacity;
+}
+
+/* =========================================================
+   CINEMATIC OVERLAY
+========================================================= */
+
+.wedding-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 247, 244, 0.05) 0%,
+    rgba(255, 238, 236, 0.02) 45%,
+    rgba(65, 30, 40, 0.12) 100%
+  );
+}
+
+/* =========================================================
+   INVITATION TEXT
+========================================================= */
+
+.wedding-hero-invitation {
+  position: absolute;
+  z-index: 4;
+
+  top: 5%;
+  left: 5%;
+  right: 5%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  pointer-events: none;
+
+  color: #713344;
+
+  will-change: transform, opacity;
+}
+
+/* Mantra */
+
+.wedding-hero-mantra {
+  max-width: 95%;
+
+  font-family: "Noto Serif Devanagari", serif;
+  font-size: clamp(13px, 3.4vw, 18px);
+  line-height: 1.65;
+  font-weight: 700;
+
+  color: #8c233b;
+
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Blessing */
+
+.wedding-hero-blessing {
+  margin: 12px 0 20px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(15px, 4vw, 21px);
+  font-style: italic;
+
+  color: #754b56;
+}
+
+/* Invitation heading */
+
+.wedding-hero-intro {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(12px, 3.5vw, 17px);
+  font-weight: 600;
+
+  letter-spacing: 4px;
+  line-height: 1.8;
+
+  color: #572b3a;
+}
+
+/* Couple names */
+
+.wedding-hero-names {
+  margin: 3px 0 15px;
+
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(43px, 10vw, 65px);
+  font-weight: 400;
+  line-height: 1.15;
+
+  white-space: nowrap;
+
+  color: #a51e48;
+
+  text-shadow: 0 2px 12px rgba(255, 255, 255, 0.35);
+}
+
+.wedding-hero-names span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+/* Date */
+
+.wedding-hero-date {
+  margin-top: 5px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(13px, 3.4vw, 18px);
+  font-weight: 700;
+
+  letter-spacing: 2px;
+  color: #8d233b;
+}
+
+/* Location */
+
+.wedding-hero-location {
+  margin-top: 12px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(18px, 4.5vw, 24px);
+  font-style: italic;
+
+  color: #593343;
+}
+
+/* =========================================================
+   VIGNETTE
+========================================================= */
+
+.wedding-hero-vignette {
+  position: absolute;
+  inset: 0;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  background: radial-gradient(
+    ellipse at center,
+    transparent 65%,
+    rgba(75, 40, 50, 0.07) 100%
+  );
+}
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+
+
+/* =========================================================
+   SCROLL INDICATOR — CENTERED PREMIUM PILL
+========================================================= */
+
+.wedding-hero-scroll {
+  position: absolute;
+  z-index: 5;
+
+  bottom: 22px;
+  left: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: max-content;
+  max-width: calc(100% - 36px);
+  box-sizing: border-box;
+
+  padding: 13px 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50px;
+
+  background: rgba(65, 48, 47, 0.88);
+
+  color: #fff;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 8px 25px rgba(40, 20, 25, 0.16);
+
+  pointer-events: none;
+}
+
+.wedding-hero-scroll-arrow {
+  display: inline-block;
+
+  font-size: 21px;
+  line-height: 1;
+
+  animation: weddingHeroArrow 1.5s ease-in-out infinite;
+}
+
+@keyframes weddingHeroArrow {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+  .wedding-hero-scroll {
+    bottom: 20px;
+
+    max-width: calc(100% - 32px);
+
+    padding: 12px 19px;
+
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .wedding-hero-scroll-arrow {
+    font-size: 19px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .wedding-hero-scroll-arrow {
+    animation: none;
+  }
+}
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .wedding-hero-section {
+    height: 180vh;
+    height: 180svh;
+  }
+
+  .wedding-hero-frame {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .wedding-hero-invitation {
+    top: 4%;
+    left: 3%;
+    right: 3%;
+  }
+
+  .wedding-hero-blessing {
+    margin: 8px 0 15px;
+  }
+
+  .wedding-hero-intro {
+    letter-spacing: 3px;
+  }
+
+  .wedding-hero-names {
+    margin-bottom: 10px;
+  }
+
+  .wedding-hero-scroll {
+    bottom: 20px;
+  }
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 768px) {
+  .wedding-hero-frame {
+    width: min(600px, 100%);
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+

@@ -1,0 +1,606 @@
+
+/* =========================================================
+   SHREYASH & DIVYA — BEFORE THE BIG DAY
+   Horizontal tilted Polaroid carousel
+   Continuous shared sky background
+========================================================= */
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.before-big-day-section {
+  position: relative;
+  z-index: 3;
+
+  width: min(600px, 100%);
+  min-height: 100vh;
+  min-height: 100svh;
+
+  margin: 0 auto;
+  padding: 110px 0 95px;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  color: #70404e;
+  background: transparent;
+
+  box-sizing: border-box;
+}
+
+/* Subtle atmosphere over the shared sky */
+
+.before-big-day-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background: radial-gradient(
+    ellipse at 50% 20%,
+    rgba(255, 255, 255, 0.18),
+    transparent 65%
+  );
+
+  pointer-events: none;
+}
+
+.before-big-day-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background: rgba(255, 244, 246, 0.10);
+
+  pointer-events: none;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.before-big-day-content {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+  transform-origin: center top;
+
+  will-change: transform, opacity;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.before-big-day-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  padding: 0 18px;
+
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.before-big-day-eyebrow {
+  color: #80643d;
+
+  font-family: "Marcellus", serif;
+  font-size: 11px;
+  font-weight: 400;
+
+  letter-spacing: 4px;
+}
+
+.before-big-day-heading h2 {
+  margin: 10px 0 0;
+
+  color: #a51e48;
+
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(48px, 11vw, 76px);
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  text-shadow: 0 2px 12px rgba(255, 255, 255, 0.45);
+}
+
+.before-big-day-subtitle {
+  max-width: 340px;
+
+  margin: 17px auto 0;
+
+  color: #795b62;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(17px, 4vw, 21px);
+  font-style: italic;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.before-big-day-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  width: 170px;
+  margin-top: 20px;
+
+  color: #a8874d;
+}
+
+.before-big-day-divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #b18b48
+  );
+}
+
+.before-big-day-divider span:last-child {
+  background: linear-gradient(
+    90deg,
+    #b18b48,
+    transparent
+  );
+}
+
+.before-big-day-divider b {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* =========================================
+   CAROUSEL
+========================================= */
+
+.moments-carousel {
+  width: 100%;
+  max-width: 100%;
+
+  margin-top: 55px;
+
+  box-sizing: border-box;
+}
+
+/* Strictly clips photos inside the 600px canvas */
+
+.moments-viewport {
+  position: relative;
+
+  width: 100%;
+  max-width: 100%;
+
+  overflow: hidden;
+
+  padding: 18px 0 28px;
+
+  box-sizing: border-box;
+
+  touch-action: pan-y;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* =========================================
+   HORIZONTAL TRACK
+========================================= */
+
+.moments-track {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  width: max-content;
+
+  padding-left: max(
+    0px,
+    calc(
+      (min(600px, 100vw) - min(78vw, 350px)) / 2
+    )
+  );
+
+  padding-right: 0;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change: transform;
+}
+
+/* =========================================
+   TILTED POLAROID CARDS
+========================================= */
+
+.moment-polaroid {
+  position: relative;
+
+  flex: 0 0 min(78vw, 350px);
+
+  width: min(78vw, 350px);
+  min-width: 0;
+
+  padding: 13px 13px 25px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(180, 151, 119, 0.18);
+  border-radius: 7px;
+
+  background: #fffefa;
+
+  box-shadow:
+    0 16px 35px rgba(75, 44, 52, 0.16),
+    0 3px 8px rgba(75, 44, 52, 0.08);
+
+  cursor: pointer;
+
+  transform-origin: center center;
+
+  -webkit-tap-highlight-color: transparent;
+
+  will-change: transform, opacity;
+
+  transition:
+    box-shadow 500ms ease,
+    border-color 500ms ease;
+}
+
+.moment-polaroid-left {
+  /* Rotation is controlled by Framer Motion */
+}
+
+.moment-polaroid-right {
+  /* Rotation is controlled by Framer Motion */
+}
+
+.moment-polaroid.is-active {
+  border-color: rgba(177, 139, 72, 0.45);
+
+  box-shadow:
+    0 24px 45px rgba(75, 44, 52, 0.22),
+    0 5px 12px rgba(75, 44, 52, 0.10);
+}
+
+.moment-polaroid:focus-visible {
+  outline: 2px solid #a51e48;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   PHOTO AREA
+========================================= */
+
+.moment-photo {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 0.88;
+
+  overflow: hidden;
+
+  border-radius: 3px;
+
+  background: #f4e8e4;
+}
+
+.moment-photo::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    transparent 35%,
+    rgba(58, 32, 40, 0.05)
+  );
+
+  pointer-events: none;
+}
+
+.moment-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1);
+
+  transition:
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.moment-polaroid.is-active .moment-photo img {
+  transform: scale(1.045);
+}
+
+/* =========================================
+   CAPTION
+========================================= */
+
+.moment-polaroid p {
+  margin: 17px 3px 0;
+
+  color: #865263;
+
+  font-family: "Great Vibes", cursive;
+  font-size: 27px;
+  font-weight: 400;
+
+  text-align: center;
+}
+
+/* =========================================
+   INDICATORS
+========================================= */
+
+.moments-indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 17px;
+}
+
+.moments-indicator {
+  width: 8px;
+  height: 8px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 20px;
+
+  background: rgba(96, 63, 68, 0.28);
+
+  cursor: pointer;
+
+  transition:
+    width 300ms ease,
+    background 300ms ease,
+    transform 300ms ease;
+}
+
+.moments-indicator:hover {
+  transform: scale(1.15);
+}
+
+.moments-indicator.active {
+  width: 27px;
+
+  background: #642b3d;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.moments-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 22px;
+
+  margin-top: 19px;
+
+  color: #805c5e;
+
+  font-family: "Marcellus", serif;
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+.moments-navigation button {
+  display: grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+
+  padding: 0;
+
+  border: 1px solid rgba(135, 92, 89, 0.35);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  color: #754052;
+
+  font-size: 24px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 250ms ease,
+    color 250ms ease,
+    transform 250ms ease,
+    border-color 250ms ease;
+}
+
+.moments-navigation button:hover:not(:disabled) {
+  background: #754052;
+  border-color: #754052;
+
+  color: #ffffff;
+
+  transform: scale(1.08);
+}
+
+.moments-navigation button:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+.moments-navigation button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.moments-navigation span {
+  min-width: 55px;
+
+  text-align: center;
+
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 768px) {
+  .before-big-day-section {
+    padding-top: 135px;
+    padding-bottom: 120px;
+  }
+
+  .before-big-day-heading h2 {
+    font-size: 76px;
+  }
+
+  .moments-carousel {
+    margin-top: 65px;
+  }
+
+  .moment-polaroid {
+    flex-basis: 350px;
+    width: 350px;
+  }
+
+  .moments-track {
+    padding-left: 125px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+  .before-big-day-section {
+    width: 100%;
+
+    padding-top: 100px;
+    padding-bottom: 90px;
+  }
+
+  .before-big-day-heading {
+    padding: 0 20px;
+  }
+
+  .before-big-day-eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .before-big-day-heading h2 {
+    font-size: clamp(48px, 12vw, 68px);
+  }
+
+  .moments-carousel {
+    margin-top: 40px;
+  }
+
+  .moments-track {
+    padding-left: 11vw;
+    gap: 22px;
+  }
+
+  .moment-polaroid {
+    flex: 0 0 78vw;
+    width: 78vw;
+
+    padding: 12px 12px 23px;
+  }
+
+  .moment-polaroid p {
+    font-size: 26px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .before-big-day-section {
+    padding-top: 85px;
+    padding-bottom: 75px;
+  }
+
+  .before-big-day-heading h2 {
+    font-size: 48px;
+  }
+
+  .before-big-day-subtitle {
+    font-size: 17px;
+  }
+
+  .moments-track {
+    padding-left: 11vw;
+    gap: 17px;
+  }
+
+  .moment-polaroid {
+    flex-basis: 78vw;
+    width: 78vw;
+
+    padding: 10px 10px 20px;
+  }
+
+  .moment-polaroid p {
+    font-size: 24px;
+  }
+
+  .moments-navigation {
+    gap: 17px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .moments-track,
+  .moment-polaroid,
+  .moment-photo img,
+  .moments-indicator,
+  .moments-navigation button {
+    transition: none !important;
+  }
+}
