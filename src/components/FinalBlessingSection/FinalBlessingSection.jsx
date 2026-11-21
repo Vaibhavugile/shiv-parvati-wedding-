@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./FinalBlessingSection.css";
 
-const BLESSING_IMAGE = "/assets/shiv-parvati-step.webp";
+const BLESSING_IMAGE = "/assets/e.jpeg";
 
 export default function FinalBlessingSection() {
   return (
@@ -59,7 +59,7 @@ export default function FinalBlessingSection() {
           viewport={{ once: true }}
           transition={{ duration: 1.1, delay: 0.3 }}
         >
-          Shreyash <span>&</span> Divya
+          Divya <span>&</span> Shreyash
         </motion.h2>
 
         <motion.p

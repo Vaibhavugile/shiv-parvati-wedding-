@@ -34,40 +34,51 @@ const celebrations = [
   {
     id: "mehndi",
     number: "02",
-    title: "Mehndi",
+    title: "Sangeet",
     subtitle: "An evening of colours & traditions",
     description:
-      "Let's celebrate with music, mehndi, laughter and unforgettable memories.",
+      "Let's celebrate with music, laughter and unforgettable memories.",
     weekday: "WEDNESDAY",
     date: "09",
     month: "DECEMBER 2026",
     time: "7:00 PM",
   },
   {
-    id: "wedding",
-    number: "03",
-    title: "Wedding",
-    subtitle: "The beginning of forever",
-    description:
-      "Join us as we celebrate the beautiful union of Shreyash & Divya.",
-    weekday: "THURSDAY",
-    date: "10",
-    month: "DECEMBER 2026",
-    time: "4:00 PM onwards",
-  },
-  {
-    id: "reception",
-    number: "04",
-    title: "Dinner & Reception",
-    subtitle: "An evening of love & celebration",
-    description:
-      "Celebrate this special new beginning with the couple and their families over dinner.",
-    weekday: "THURSDAY",
-    date: "10",
-    month: "DECEMBER 2026",
-    time: "8:00 PM onwards",
-  },
+  id: "wedding",
+  number: "03",
+  title: "Wedding",
+  subtitle: "The beginning of forever",
+  description:
+    "Join us as we celebrate the beautiful union of Divya & Shreyash.",
+  weekday: "THURSDAY",
+  date: "10",
+  month: "DECEMBER 2026",
+  time: [
+    { time: "4:00 PM", event: "BARAAT" },
+    { time: "5:00 PM", event: "SAPTAPADI" },
+    { time: "8:00 PM", event: "VARMALA" },
+  ],
+},
+ 
 ];
+
+function TimeDisplay({ value }) {
+  const match = value.match(/^(\d{1,2}:\d{2})\s*(AM|PM)(.*)$/i);
+
+  if (!match) {
+    return <strong className="celebration-time-value">{value}</strong>;
+  }
+
+  const [, clock, period, suffix] = match;
+
+  return (
+    <strong className="celebration-time-value">
+      <span>{clock}</span>
+      <span>{period.toUpperCase()}</span>
+      {suffix.trim() && <span>{suffix.trim()}</span>}
+    </strong>
+  );
+}
 
 // =========================================================
 // EVENT CARD WITH SCROLL ZOOM REVEAL
@@ -186,13 +197,34 @@ function CelebrationCard({ event, index }) {
           </div>
 
           {/* TIME */}
-          <div className="celebration-event-details">
-            <span className="celebration-event-label">
-              TIME
-            </span>
+   {/* TIME */}
 
-            <strong>{event.time}</strong>
-          </div>
+<div className="celebration-event-details celebration-time-details">
+  <span className="celebration-event-label">
+    TIME
+  </span>
+
+  {Array.isArray(event.time) ? (
+    <div className="celebration-ceremony-list">
+      {event.time.map((item, index) => (
+        <div
+          className="celebration-ceremony-item"
+          key={`${item.event}-${index}`}
+        >
+          <span className="celebration-ceremony-time">
+            {item.time}
+          </span>
+
+          <span className="celebration-ceremony-name">
+            {item.event}
+          </span>
+        </div>
+      ))}
+    </div>
+  ) : (
+    <TimeDisplay value={event.time} />
+  )}
+</div>
 
           {/* VENUE */}
           <div className="celebration-event-details">
@@ -216,8 +248,8 @@ function CelebrationCard({ event, index }) {
           </a>
 
           <div className="celebration-card-names">
-            SHREYASH <i>&</i> DIVYA
-          </div>
+            DIVYA <i>&</i> SHREYASH
+                      </div>
 
         </div>
       </div>
@@ -329,7 +361,7 @@ export default function WeddingCelebrationsSection() {
 
           <p>
             With love,
-            <strong>Shreyash & Divya</strong>
+            <strong>Khangar  &  Kapse  Family</strong>
           </p>
         </motion.div>
 

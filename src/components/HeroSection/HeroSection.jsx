@@ -181,7 +181,7 @@ export default function HeroSection({
                 ease: "easeOut",
               }}
             >
-              Shreyash <span>&</span> Divya
+              Divya <span>&</span> Shreyash
             </motion.h1>
 
             <motion.div
@@ -193,7 +193,7 @@ export default function HeroSection({
                 duration: 1,
               }}
             >
-              Thursday · 10 DECEMBER 2026
+              
             </motion.div>
 
             <motion.div
@@ -205,7 +205,7 @@ export default function HeroSection({
                 duration: 1,
               }}
             >
-              Nagpur, Maharashtra
+              
             </motion.div>
           </motion.div>
 

@@ -20,8 +20,8 @@ const WEDDING_DATE_LABEL = "THURSDAY · 10 DECEMBER 2026";
 const WEDDING_LOCATION = "Nagpur, Maharashtra";
 
 // Replace with actual parents' names
-const GROOM_PARENTS = "Mr. Father's Name & Mrs. Mother's Name";
-const BRIDE_PARENTS = "Mr. Father's Name & Mrs. Mother's Name";
+const GROOM_PARENTS = "Late Shri.Tukaramji Kapse & Smt. Jyoti Kapse";
+const BRIDE_PARENTS = "Mr. Shekharrao Khangar & Mrs. Veena Khangar";
 
 // =========================================================
 // COUNTDOWN
@@ -489,7 +489,7 @@ export default function InvitationDetailsSection() {
             viewport={revealViewport}
           >
             <span className="invitation-details-eyebrow">
-              THE FAMILIES OF SHREYASH & DIVYA
+              THE FAMILIES OF DIVYA & SHREYASH
             </span>
 
             <p>
@@ -518,7 +518,36 @@ export default function InvitationDetailsSection() {
           </motion.div>
 
           {/* GROOM */}
+           <motion.div
+            className="invitation-details-person bride-details"
+            variants={revealVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={revealViewport}
+          >
+            <span className="invitation-person-label">
+              THE BRIDE
+            </span>
 
+            <h2>Divya</h2>
+
+            <div className="invitation-parent-details">
+              <span>Daughter of</span>
+
+              <p>{BRIDE_PARENTS}</p>
+            </div>
+          </motion.div>
+
+
+          <motion.div
+            className="invitation-details-with"
+            variants={revealVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={revealViewport}
+          >
+            with
+          </motion.div>
           <motion.div
             className="invitation-details-person groom-details"
             variants={revealVariants}
@@ -541,38 +570,10 @@ export default function InvitationDetailsSection() {
 
           {/* WITH */}
 
-          <motion.div
-            className="invitation-details-with"
-            variants={revealVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={revealViewport}
-          >
-            with
-          </motion.div>
 
           {/* BRIDE */}
 
-          <motion.div
-            className="invitation-details-person bride-details"
-            variants={revealVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={revealViewport}
-          >
-            <span className="invitation-person-label">
-              THE BRIDE
-            </span>
-
-            <h2>Divya</h2>
-
-            <div className="invitation-parent-details">
-              <span>Daughter of</span>
-
-              <p>{BRIDE_PARENTS}</p>
-            </div>
-          </motion.div>
-
+         
           {/* LOCATION */}
 
           <motion.p

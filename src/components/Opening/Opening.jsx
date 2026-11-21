@@ -41,7 +41,7 @@ export default function Opening({ onOpen }) {
           animate={{ x: "0%", opacity: 1 }}
           transition={{
             delay: 0.15,
-            duration: 2,
+            duration: 5,
             ease: [0.22, 1, 0.36, 1],
           }}
         >
@@ -99,9 +99,9 @@ export default function Opening({ onOpen }) {
             ease: "easeOut",
           }}
         >
-          <span>Shreyash</span>
-          <span className="shiv-opening__ampersand">&</span>
           <span>Divya</span>
+          <span className="shiv-opening__ampersand">&</span>
+          <span>Shreyash</span>
         </motion.div>
 
         {/* FLOATING PETALS */}
