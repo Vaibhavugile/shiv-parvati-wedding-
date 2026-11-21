@@ -17,7 +17,7 @@ import "./InvitationDetailsSection.css";
 const WEDDING_DATE = new Date(2026, 11, 10, 0, 0, 0);
 
 const WEDDING_DATE_LABEL = "THURSDAY · 10 DECEMBER 2026";
-const WEDDING_LOCATION = "Nagpur, Maharashtra";
+const WEDDING_LOCATION = "";
 
 // Replace with actual parents' names
 const GROOM_PARENTS = "Late Shri.Tukaramji Kapse & Smt. Jyoti Kapse";
@@ -357,7 +357,7 @@ function ScratchDateCard() {
 
       <div
         className={`invitation-scratch-card ${
-          revealed ? "is-revealed" : ""
+           "is-revealed"
         }`}
       >
         {/* DATE UNDER THE GOLD COATING */}
@@ -369,7 +369,6 @@ function ScratchDateCard() {
 
           <span>DECEMBER 2026</span>
 
-          <small>NAGPUR, MAHARASHTRA</small>
         </div>
 
         {/* REAL SCRATCH CANVAS */}

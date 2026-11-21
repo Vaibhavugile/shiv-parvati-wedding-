@@ -11,25 +11,37 @@ import "./BeforeTheBigDaySection.css";
 
 const moments = [
   {
-    image: "/assets/moments-1.webp",
+    image: "/assets/im3.jpeg",
     alt: "A beautiful moment together",
     caption: "A moment to remember",
   },
+
   {
-    image: "/assets/moments-2.webp",
-    alt: "A special couple moment",
-    caption: "Together, always",
-  },
-  {
-    image: "/assets/moments-3.webp",
+    image: "/assets/im8.jpeg",
     alt: "A cherished memory",
-    caption: "Little moments, big memories",
+    caption: "Our beautiful beginning",
   },
-  {
-    image: "/assets/moments-4.webp",
+     {
+    image: "/assets/im7.jpeg",
     alt: "A beautiful memory",
     caption: "Our favourite memories",
   },
+  {
+    image: "/assets/im4.jpeg",
+    alt: "A beautiful memory",
+    caption: "The story of us",
+  },
+  {
+    image: "/assets/im5.jpeg",
+    alt: "A beautiful memory",
+    caption: "Love in every frame",
+  },
+  {
+    image: "/assets/im6.jpeg",
+    alt: "A beautiful memory",
+    caption: "Pure happiness",
+  },
+ 
 ];
 
 export default function BeforeTheBigDaySection() {

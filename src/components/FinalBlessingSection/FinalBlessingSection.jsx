@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./FinalBlessingSection.css";
 
-const BLESSING_IMAGE = "/assets/e.jpeg";
+const BLESSING_IMAGE = "/assets/im9.png";
 
 export default function FinalBlessingSection() {
   return (
@@ -62,35 +62,34 @@ export default function FinalBlessingSection() {
           Divya <span>&</span> Shreyash
         </motion.h2>
 
-        <motion.p
-          className="final-blessing-hashtag"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.6 }}
-        >
-          #SHREYASHWEDDING
-        </motion.p>
-
+      
         <motion.div
-          className="final-blessing-footer"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.8 }}
-        >
-          <span className="final-blessing-footer-flower">
-            ❀
-          </span>
+  className="final-blessing-footer"
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1, delay: 0.8 }}
+>
+  <span className="final-blessing-footer-flower">
+    ❀
+  </span>
 
-          <span>
-            MADE WITH LOVE
-          </span>
+  <span>
+    MADE WITH LOVE BY{" "}
+    <a
+      href="https://syteoslabs.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit SYTEOS Labs website"
+    >
+      SYTEOS Labs LLP
+    </a>
+  </span>
 
-          <span className="final-blessing-footer-flower">
-            ❀
-          </span>
-        </motion.div>
+  <span className="final-blessing-footer-flower">
+    ❀
+  </span>
+</motion.div>
 
       </div>
     </section>

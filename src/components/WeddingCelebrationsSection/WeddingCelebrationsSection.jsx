@@ -22,7 +22,7 @@ const celebrations = [
   {
     id: "haldi",
     number: "01",
-    title: "Haldi",
+    title: "Haldi Carnival",
     subtitle: "A morning of turmeric, marigolds & laughter",
     description:
       "Join us for a joyful celebration filled with sunshine, blessings and beautiful traditions.",
@@ -35,7 +35,7 @@ const celebrations = [
     id: "mehndi",
     number: "02",
     title: "Sangeet",
-    subtitle: "An evening of colours & traditions",
+    subtitle: "An evening of music & traditions",
     description:
       "Let's celebrate with music, laughter and unforgettable memories.",
     weekday: "WEDNESDAY",
@@ -161,9 +161,7 @@ function CelebrationCard({ event, index }) {
             {event.number}
           </span>
 
-          <span className="celebration-kicker">
-            YOU ARE INVITED TO THE
-          </span>
+         
 
           <h3>{event.title}</h3>
 
