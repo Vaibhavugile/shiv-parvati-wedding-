@@ -357,10 +357,10 @@ export default function WeddingCelebrationsSection() {
             YOUR PRESENCE IS OUR PRESENT
           </span>
 
-          <p>
+          {/* <p>
             With love,
             <strong>Khangar  &  Kapse  Family</strong>
-          </p>
+          </p> */}
         </motion.div>
 
       </div>

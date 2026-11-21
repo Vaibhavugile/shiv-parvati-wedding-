@@ -1,7 +1,7 @@
 
 {
   "hosting": {
-    "site": "wedding-invite-shreyash-divya",
+    "site": "divya-shreyash-9-10",
     "public": "build",
     "ignore": [
       "firebase.json",

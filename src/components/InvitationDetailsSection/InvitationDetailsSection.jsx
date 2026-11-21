@@ -20,8 +20,8 @@ const WEDDING_DATE_LABEL = "THURSDAY · 10 DECEMBER 2026";
 const WEDDING_LOCATION = "";
 
 // Replace with actual parents' names
-const GROOM_PARENTS = "Late Shri.Tukaramji Kapse & Smt. Jyoti Kapse";
-const BRIDE_PARENTS = "Mr. Shekharrao Khangar & Mrs. Veena Khangar";
+const GROOM_PARENTS = "";
+const BRIDE_PARENTS = "";
 
 // =========================================================
 // COUNTDOWN
@@ -488,17 +488,17 @@ export default function InvitationDetailsSection() {
             viewport={revealViewport}
           >
             <span className="invitation-details-eyebrow">
-              THE FAMILIES OF DIVYA & SHREYASH
+              WITH THE BLESSINGS OF OUR FAMILIES
             </span>
 
             <p>
-              Request the honour of your presence
+              We joyfully invite you to celebrate our wedding
               <br />
-              at the wedding of their children,
+             and request the honour of your presence
               <br />
-              and your blessings as they begin
+             as we begin a beautiful new chapter of our lives together
               <br />
-              their beautiful journey together.
+              
             </p>
           </motion.div>
 
@@ -531,7 +531,7 @@ export default function InvitationDetailsSection() {
             <h2>Divya</h2>
 
             <div className="invitation-parent-details">
-              <span>Daughter of</span>
+              {/* <span>Daughter of</span> */}
 
               <p>{BRIDE_PARENTS}</p>
             </div>
@@ -561,7 +561,7 @@ export default function InvitationDetailsSection() {
             <h2>Shreyash</h2>
 
             <div className="invitation-parent-details">
-              <span>Son of</span>
+              {/* <span>Son of</span> */}
 
               <p>{GROOM_PARENTS}</p>
             </div>

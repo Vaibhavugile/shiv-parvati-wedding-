@@ -160,7 +160,7 @@ export default function HeroSection({
             >
               WE CORDIALLY INVITE
               <br />
-              YOU TO THE WEDDING OF
+              YOU FOR OUR WEDDING
             </motion.p>
 
             <motion.h1
