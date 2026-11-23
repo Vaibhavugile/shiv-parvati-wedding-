@@ -1,7 +1,7 @@
 
 {
   "hosting": {
-    "site": "divya-shreyash-9-10",
+    "site": "wedding-invite-kapse",
     "public": "build",
     "ignore": [
       "firebase.json",

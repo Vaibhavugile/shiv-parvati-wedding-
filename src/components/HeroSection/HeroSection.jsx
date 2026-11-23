@@ -160,7 +160,7 @@ export default function HeroSection({
             >
               WE CORDIALLY INVITE
               <br />
-              YOU FOR OUR WEDDING
+              YOU TO THE WEDDING OF
             </motion.p>
 
             <motion.h1
@@ -181,7 +181,7 @@ export default function HeroSection({
                 ease: "easeOut",
               }}
             >
-              Divya <span>&</span> Shreyash
+              Shreyash  <span>&</span> Divya
             </motion.h1>
 
             <motion.div

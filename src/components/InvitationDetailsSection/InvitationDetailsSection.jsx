@@ -20,8 +20,8 @@ const WEDDING_DATE_LABEL = "THURSDAY · 10 DECEMBER 2026";
 const WEDDING_LOCATION = "";
 
 // Replace with actual parents' names
-const GROOM_PARENTS = "";
-const BRIDE_PARENTS = "";
+const GROOM_PARENTS = "Late Shri.Tukaramji Kapse & Smt. Jyoti Kapse";
+const BRIDE_PARENTS = "Mr. Shekharrao Khangar & Mrs. Veena Khangar";
 
 // =========================================================
 // COUNTDOWN
@@ -357,7 +357,7 @@ function ScratchDateCard() {
 
       <div
         className={`invitation-scratch-card ${
-           "is-revealed"
+          revealed ? "is-revealed" : ""
         }`}
       >
         {/* DATE UNDER THE GOLD COATING */}
@@ -369,6 +369,7 @@ function ScratchDateCard() {
 
           <span>DECEMBER 2026</span>
 
+          <small>NAGPUR, MAHARASHTRA</small>
         </div>
 
         {/* REAL SCRATCH CANVAS */}
@@ -488,17 +489,17 @@ export default function InvitationDetailsSection() {
             viewport={revealViewport}
           >
             <span className="invitation-details-eyebrow">
-              WITH THE BLESSINGS OF OUR FAMILIES
+              THE FAMILIES OF  SHREYASH & DIVYA 
             </span>
 
             <p>
-              We joyfully invite you to celebrate our wedding
+              Request the honour of your presence
               <br />
-             and request the honour of your presence
+              at the wedding of their children,
               <br />
-             as we begin a beautiful new chapter of our lives together
+              and your blessings as they begin
               <br />
-              
+              their beautiful journey together.
             </p>
           </motion.div>
 
@@ -517,6 +518,36 @@ export default function InvitationDetailsSection() {
           </motion.div>
 
           {/* GROOM */}
+          
+
+<motion.div
+            className="invitation-details-person groom-details"
+            variants={revealVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={revealViewport}
+          >
+            <span className="invitation-person-label">
+              THE GROOM
+            </span>
+
+            <h2>Shreyash</h2>
+
+            <div className="invitation-parent-details">
+              <span>Son of</span>
+
+              <p>{GROOM_PARENTS}</p>
+            </div>
+          </motion.div>
+          <motion.div
+            className="invitation-details-with"
+            variants={revealVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={revealViewport}
+          >
+            with
+          </motion.div>
            <motion.div
             className="invitation-details-person bride-details"
             variants={revealVariants}
@@ -531,39 +562,9 @@ export default function InvitationDetailsSection() {
             <h2>Divya</h2>
 
             <div className="invitation-parent-details">
-              {/* <span>Daughter of</span> */}
+              <span>Daughter of</span>
 
               <p>{BRIDE_PARENTS}</p>
-            </div>
-          </motion.div>
-
-
-          <motion.div
-            className="invitation-details-with"
-            variants={revealVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={revealViewport}
-          >
-            with
-          </motion.div>
-          <motion.div
-            className="invitation-details-person groom-details"
-            variants={revealVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={revealViewport}
-          >
-            <span className="invitation-person-label">
-              THE GROOM
-            </span>
-
-            <h2>Shreyash</h2>
-
-            <div className="invitation-parent-details">
-              {/* <span>Son of</span> */}
-
-              <p>{GROOM_PARENTS}</p>
             </div>
           </motion.div>
 

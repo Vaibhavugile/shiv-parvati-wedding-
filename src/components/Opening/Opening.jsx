@@ -99,9 +99,9 @@ export default function Opening({ onOpen }) {
             ease: "easeOut",
           }}
         >
-          <span>Divya</span>
-          <span className="shiv-opening__ampersand">&</span>
           <span>Shreyash</span>
+          <span className="shiv-opening__ampersand">&</span>
+          <span>Divya</span>
         </motion.div>
 
         {/* FLOATING PETALS */}

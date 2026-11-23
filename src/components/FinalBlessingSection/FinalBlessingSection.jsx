@@ -59,7 +59,9 @@ export default function FinalBlessingSection() {
           viewport={{ once: true }}
           transition={{ duration: 1.1, delay: 0.3 }}
         >
-          Divya <span>&</span> Shreyash
+          Kapse <span></span> Family
+          <br />
+          
         </motion.h2>
 
       

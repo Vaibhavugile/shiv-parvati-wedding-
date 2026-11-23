@@ -19,33 +19,33 @@ const VENUE = "Fun Planet Resort, Nagpur";
 // =========================================================
 
 const celebrations = [
-  {
-    id: "haldi",
-    number: "01",
-    title: "Haldi Carnival",
-    subtitle: "A morning of turmeric, marigolds & laughter",
-    description:
-      "Join us for a joyful celebration filled with sunshine, blessings and beautiful traditions.",
-    weekday: "WEDNESDAY",
-    date: "09",
-    month: "DECEMBER 2026",
-    time: "12:00 PM",
-  },
-  {
-    id: "mehndi",
-    number: "02",
-    title: "Sangeet",
-    subtitle: "An evening of music & traditions",
-    description:
-      "Let's celebrate with music, laughter and unforgettable memories.",
-    weekday: "WEDNESDAY",
-    date: "09",
-    month: "DECEMBER 2026",
-    time: "7:00 PM",
-  },
+  // {
+  //   id: "haldi",
+  //   number: "01",
+  //   title: "Haldi Carnival",
+  //   subtitle: "A morning of turmeric, marigolds & laughter",
+  //   description:
+  //     "Join us for a joyful celebration filled with sunshine, blessings and beautiful traditions.",
+  //   weekday: "WEDNESDAY",
+  //   date: "09",
+  //   month: "DECEMBER 2026",
+  //   time: "12:00 PM",
+  // },
+  // {
+  //   id: "mehndi",
+  //   number: "02",
+  //   title: "Sangeet",
+  //   subtitle: "An evening of music & traditions",
+  //   description:
+  //     "Let's celebrate with music, laughter and unforgettable memories.",
+  //   weekday: "WEDNESDAY",
+  //   date: "09",
+  //   month: "DECEMBER 2026",
+  //   time: "7:00 PM",
+  // },
   {
   id: "wedding",
-  number: "03",
+  number: "",
   title: "Wedding",
   subtitle: "The beginning of forever",
   description:
@@ -295,17 +295,17 @@ export default function WeddingCelebrationsSection() {
           }}
         >
           <span className="celebrations-eyebrow">
-            OUR SPECIAL MOMENTS
+            OUR SPECIAL MOMENT
           </span>
 
           <span className="celebrations-heading-flower">
             ❀
           </span>
 
-          <h2>The Celebrations</h2>
+          <h2>The Celebration</h2>
 
           <p>
-            Four beautiful moments,
+            
             <br />
             one unforgettable celebration.
           </p>
